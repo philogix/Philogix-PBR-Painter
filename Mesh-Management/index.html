@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Mesh Management - Philogix PBR Painter 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Mesh Management";
+        var mkdocs_page_input_path = "npanel.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Philogix PBR Painter 2.0
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        <ul>
+          <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+          </li>
+        </ul>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Mesh Management</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#materialset">Material set</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#materialslots">Material Slots</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shadercontrol">Plx Shader Control</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#uvset">UV set</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#uvslots">UV slots</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uvcontrol">UV Control</a>
+    </li>
+
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+
+
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bake/">Bake</a></li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Paint-Layer/">Paint Layer</a></li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Export/">Export</a></li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="Release-notes/">Release notes</a></li>
+              </ul>
+
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Philogix PBR Painter 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Mesh Management</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="meshmanage">Mesh Management</h1>
+<h2 id="materialset">Material set</h2>
+<p><img alt="material management panel" src="../img/material management/01.png" /></p>
+<p>The Matreial Set window shows all the material from the 3D model in the active object. It allows to add, remove and arrange materials, add Plx Shader to the material. Add-on will work on Plx Shader</p>
+<h3 id="materialslots">Material Slots</h3>
+<p><img alt="Main Panel Preset Group Selection" src="../img/material management/02.png" /></p>
+<h4>1. Material Preview</h4>
+<p>Show material preview.</p>
+<h4>2. Material name</h4>
+<p>Displays the material name, the add-on will be based on the material name to work, so the material name should be set once and not changed during work.</p>
+<h4>3. Material Status</h4>
+<p>Displays the status of the material, if the Material Status shows a check icon, the material is ready to work with the add-on.</p>
+<h4>4. Material Slots Control</h4>
+<p>Allows adding, removing and moving Material slots.</p>
+<h3 id="shadercontrol">Plx Shader Control</h3>
+
+<p><img alt="Main Panel Tools Block" src="../img/material management/03.png" /></p>
+<p>Plx shader is a Shader created by Philogix PBR Painter add-on. To work with Philogix PBR Painter, the material requires Plx Shader. Plx Shader Control allows adding, removing and Fixing Plx Shader errors on the material.</p>
+
+<h4>1. Adding or Fixing Plx Shader</h4>
+<p>This button allows adding Fix Plx Shader.</p>
+<h4>2. Remove Plx Shader</h4>
+<p>Button to remove Plx Shader from the material.</p>
+
+<h2 id="uvset">UV set</h2>
+<p><img alt="Preferences" src="../img/material management/04.png" /></p>
+<p>The UV set window manages the UVs of the active object. You can create multiple UVs to work with but only Export Map on selected UVs.</p>
+<h4 id="uvslots">1. UV slots</h3>
+<p>Display the UVs of the object</p>
+<h4 id="uvcontrol">2. UV Control</h3>
+<p>Button to add or remove UV</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Bake/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

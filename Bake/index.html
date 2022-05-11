@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Mesh Management - Philogix PBR Painter 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Mesh Management";
+        var mkdocs_page_input_path = "npanel.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Philogix PBR Painter 2.0
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        <ul>
+          <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="toctree-l1"><a class="reference internal" href="../Mesh-Management/">Mesh Management</a></li>
+        </ul>
+
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Bake</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general">General settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#usehigh">1. Use high mesh</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#size">2. Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#margin">3. Margin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quality">4. Quality</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#baker">Baker List</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#occlusion">1. Ambient Occlusion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#normal">2. Normal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#edge">3. Edge mask</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#curvature">4. Curvature</a>
+    </li>
+
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Paint-Layer/">Paint Layer</a></li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Export/">Export</a></li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Release-notes/">Release notes</a></li>
+              </ul>
+
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Philogix PBR Painter 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Bake</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="meshmanage">Baking</h1>
+                <p><img alt="material management panel" src="../img/bake/01.png" /></p>
+                <p>Baking refer to the action of transferrin mesh based information into textures. These information are then read by Philogix PBR Painter to perform advanced effects. Smart Materials and Smart  Surfaces rely on them for example.</p>
+
+                <h2 id="general">General settings</h2>
+<p><img alt="material management panel" src="../img/bake/02.png" /></p>
+<h4 id="usehigh">1. Use high mesh</h4>
+<p>If enabled, the high-poly mesh list provided to the bakers will be ignored and the low-poly mesh will be baked on itself instead.</p>
+<p>This parameter is useful when working with a high-poly mesh directly. For example, when baking an ambient occlusion texture for a high-poly car with this setting enabled, the ray distance is ignored and the baker will produce a perfect bake (no ray misses or geometry mismatch).</p>
+<h4 id="size">2. Size</h4>
+<p>Control the baking output texture resolution (in pixels).</p>
+<h4 id="margin">3. Margin</h4>
+<p>Margin is a process that happens after the generation of a texture. Its purpose is to dilate the borders of the UV islands to fill empty areas with similar pixels.</p>
+<h4 id="quality">4. Quality</h4>
+<p>Parameters "Quality" control the texture quality. High quality values provide a better filtering but can result in a loss of performances. This setting controls the amount of samples per pixel.</p>
+
+<h3 id="baker">Baker List</h3>
+<p><img alt="Main Panel Preset Group Selection" src="../img/bake/03.png" /></p>
+<p>If it is checked it will enable this baking for the baking process</p>
+<h4 id="occlusion">1. Ambient Occlusion</h4>
+<p><img alt="Main Panel Preset Group Selection" src="../img/bake/04.png" /></p>
+<p>The Ambient Occlusion baker allows to bake an ambient shadow texture.</p>
+<ul>
+  <li><strong>Radius</strong>: Distance up to which other objects are considered to occlude the shading point. Default is 0.5</li>
+  <li><strong>Only local</strong>: Only detect occlusion from the object itself, and not others.</li>
+</ul>
+<h4 id="normal">2. Normal</h4>
+<p><img alt="Main Panel Preset Group Selection" src="../img/bake/05.png" /></p>
+<p>The Normal Map from mesh baker allows you to create a tangent space or world space normal map from a high poly mesh.</p>
+<ul>
+  <li><strong>Normal Format</strong>: Defines the format of the normal texture if the map type parameter is set to Tangent Space.</li>
+  <li><strong>Apply Bevel</strong>: Render rounded corners and apply to Normal map.</li>
+  <li><strong>Bevel Radius</strong>: Width of the bevel effect on edges.</li>
+</ul>
+<h4 id="edge">3. Edge mask</h4>
+<p><img alt="Main Panel Preset Group Selection" src="../img/bake/06.png" /></p>
+<p>The Edge mask baker allows to extract a edge texture. This texture contains cavities and edges information related to the geometry.</p>
+<ul>
+  <li><strong>Radius</strong>: Distance up to which other objects are considered to edge the shading point. Default is 0.05</li>
+</ul>
+<h4 id="curvature">4. Curvature</h4>
+<p><img alt="Main Panel Preset Group Selection" src="../img/bake/07.png" /></p>
+<p>The Curvature baker allows to extract a curvature texture. This texture contains cavities and edges information related to the geometry.</p>
+<ul>
+  <li><strong>Radius</strong>: Distance up to which other objects are considered to curvature the shading point. Default is 0.05</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Mesh-Management/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Paint-Layer/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

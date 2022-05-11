@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Paint Layer - Philogix PBR Painter 2.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Paint Layer";
+        var mkdocs_page_input_path = "Paint Layer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Philogix PBR Painter 2.0
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+        <ul>
+          <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="toctree-l1"><a class="reference internal" href="../Mesh-Management/">Mesh Management</a></li>
+        </ul>
+        <ul>
+          <li class="toctree-l1"><a class="reference internal" href="../Bake/">Bake</a></li>
+        </ul>
+
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Paint Layer</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#materiallayer">Material Layers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#controlpanel">Control panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#materialslot">Material Slots</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#channellayer">Channel Layers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#channellist">Channel List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#channelsetting">Channel Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#layercontrol">Channel Layer Control</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#layerslot">Channel Layer Slots</a>
+    </li>
+
+        </ul>
+    </li>
+  
+    <li class="toctree-l2"><a class="reference internal" href="./Channel-Layers-Settings.html">Channel Layers Settings</a>
+    </li>
+
+    </ul>
+                </li>
+              </ul>
+
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Export/">Export</a></li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Release-notes/">Release notes</a></li>
+              </ul>
+
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Philogix PBR Painter 2.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Paint Layer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="meshmanage">Paint Layer</h1>
+                <p><img alt="material management panel" src="../img/paint layer/01.png" /></p>
+                <p>The Paint Layer lets you manipulate the layers of a Material. A layer contains the painting and effects that will create the texture on the 3D object in the scene. You can hide and unhide layers, put them into folders and change their opacity and blending mode..</p>
+                <p>The Paint Layer display layers with a specific hierarchy : the layer at the bottom will be drawn first on the mesh, the layer on top will follow. Therefore the layer at the top of the stack is the last item, while the layer at the far bottom is the first one.</p>
+                <h2 id="materiallayer">Material Layers</h2>
+<p><img alt="material management panel" src="../img/paint layer/02.png" /></p>
+<h4 id="controlpanel">Control panel</h4>
+<p><img alt="material management panel" src="../img/paint layer/03.png" /></p>
+<h6>1. Create new layer</h4>
+  <p>Create a new Material layer above the currently selected one.</p>
+  <p><strong>Types of layers :</strong></p>
+  <ul>
+    <li><strong>Custom Layer</strong>: Custom Layer allows building material layer with full channel, can create layers within channel. And control the affected area with Layer Mask.</li>
+    <li><strong>Library Layer</strong>: The Library Layer is a pre-made material layer in Philogix PBR Painter that reads information from Bake Maps, processes it, and outputs channels. So you can't add layers in channels but you can control the area with Layer Mask.</li>
+  </ul>
+<h6>2. Import PBR set</h4>
+  <p><img alt="material management panel" src="../img/paint layer/04.png" /></p>
+  <p>Import the PBR set to the Custom Layer.</p>
+<h6>3. Move layer</h4>
+  <p>Move up or down the selected layer.</p>
+<h6>4. Remove layer</h4>
+  <p>Delete the currently selected item</p>
+<h6>5. Viewmode</h4>
+  <p>Viewmode controls the view mode of the Layer paint. The viewmode can be used to defined the current display context. Using this drop-down menu, you can specify which channels are displayed on the object</p>
+
+<h4 id="materialslot">Material Slots</h4>
+<p><img alt="material management panel" src="../img/paint layer/05.png" /></p>
+
+<h6>1. Material Type</h4>
+  <p>Material Type shows material type icon.</p>
+<h6>2. Mute layer</h4>
+  <p>Muting a layer removes the contribution of the layer to the Material.</p>
+<h6>3. Name layer</h4>
+  <p>Name layer manages the name of the Material Layer.</p>
+<h6>4. Clip layer</h4>
+  <p>Clip layer is the layer option that is a sublayer of the layer below. The child layer will only affect the parent layer. The parent layer can have many child layers.</p>
+<h6>5. Color mark</h4>
+  <p>Color mark has the effect of marking Layers on Layer Paint and in Shader Editor.</p>
+
+  <h2 id="channellayer">Channel Layers</h2>
+<p><img alt="material management panel" src="../img/paint layer/06.png" /></p>
+<h4 id="channellist">Channel List</h4>
+<p><img alt="material management panel" src="../img/paint layer/07.png" /></p>
+<p>Channel List displays a list of the channels of the selected Material Layer, including the Layer Mask.</p>
+<p>When a channel in the Channel List is selected, it is displayed in blue. Then the window below will be used to edit that channel.</p>
+
+<h4 id="channelsetting">Channel Settings</h2>
+<p><img alt="material management panel" src="../img/paint layer/08.png" /></p>
+<p>Channel Settings controls the parameters of a Channel.</p>
+<h6>1. Anchor Point</h4>
+  <p>An Anchor Point is a way to expose any resource or element in the Channel List and reference it in different areas of the Channel List for different purposes and with a different set of adjustments. They open up a whole new set of possibilities, allowing you to effectively link layers or masks together and have a single Anchor point affect multiple aspects of your project, transforming Philogix PBR Painter into a truly non-linear experience.</p>
+  <p>When Anchor Point is activated, you can use this Channel in Anchor Layer</p>
+  <h6>2. Channel Name</h4>
+  <p>Show channel name is working</p>
+<h6>3. Blending modes</h4>
+  <p>Layers and effects have access to many Blending Modes. They allow to mix the result of a layer with the other layers below in different manners.</p>
+<h6>4. Channel Opacity</h4>
+  <p>Controls the amount of influence the active channel of the selected Material Layer</p>
+
+<h4 id="layercontrol">Channel Layer Control</h4>
+<p><img alt="material management panel" src="../img/paint layer/09.png" /></p>
+
+<h6>1. Create new layer</h4>
+  <p>Create a new Material layer above the currently selected one.</p>
+    <p><strong>Types of layers :</strong></p>
+    <ul>
+      <li><strong>Base Layer</strong></li>
+      <li><strong>Image Layer</strong></li>
+      <li><strong>Paint Layer</strong></li>
+      <li><strong>Surface Layer</strong></li>
+      <li><strong>Anchor Layer</strong></li>
+      <li><strong>Filter Layer</strong></li>
+    </ul>
+
+  <p>For more information about Layers, see the dedicated pages.</p>
+
+<h6>2. Move layer</h4>
+  <p>Move up or down the selected layer.</p>
+<h6>3. Remove layer</h4>
+  <p>Delete the currently selected item.</p>
+
+
+
+<h4 id="layerslot">Channel Layer Slots</h4>
+  <p><img alt="material management panel" src="../img/paint layer/10.png" /></p>
+
+  <h6>1. Channel Layer Type</h4>
+    <p>Channel Layer Type shows Channel Layer type icon.</p>
+  <h6>2. Mute layer</h4>
+    <p>Muting a layer removes the contribution of the layer to the Channel Layer.</p>
+  <h6>3. Name layer</h4>
+    <p>Name layer manages the name of the Channel Layer.</p>
+  <h6>4. Clip layer</h4>
+    <p>Clip layer is the layer option that is a sublayer of the layer below. The child layer will only affect the parent layer. The parent layer can have many child layers.</p>
+  <h6>5. Blending modes</h4>
+    <p>Layers and effects have access to many Blending Modes. They allow to mix the result of a layer with the other layers below in different manners.</p>
+
+            </div>
+          </div><footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Bake/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="./Channel-Layers-Settings.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
